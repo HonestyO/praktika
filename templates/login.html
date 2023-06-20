@@ -1,0 +1,38 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход - Строительная компания "Самрат Строй"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Главная</a></li>
+                <li><a href="{{ url_for('about') }}">О Нас</a></li>
+                <li><a href="{{ url_for('faq') }}">Часто задаваемые вопросы</a></li>
+                <li><a href="{{ url_for('contact') }}">Контакты</a></li>
+                <li><a href="{{ url_for('login') }}">Вход</a></li>
+                <li><a href="{{ url_for('register') }}">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Вход</h1>
+
+    <form action="{{ url_for('login') }}" method="POST">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Войти">
+    </form>
+
+    <footer>
+        &copy; 2023 Строительная компания "Самрат Строй"
+    </footer>
+</body>
+</html>

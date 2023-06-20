@@ -1,0 +1,44 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация - Строительная компания "Самрат Строй"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Главная</a></li>
+                <li><a href="{{ url_for('about') }}">О Нас</a></li>
+                <li><a href="{{ url_for('faq') }}">Часто задаваемые вопросы</a></li>
+                <li><a href="{{ url_for('contact') }}">Контакты</a></li>
+                <li><a href="{{ url_for('login') }}">Вход</a></li>
+                <li><a href="{{ url_for('register') }}">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Регистрация</h1>
+
+    <form action="{{ url_for('register') }}" method="POST">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="email">Emailㅤㅤㅤㅤㅤㅤ:</label>
+        <input type="text" id="email" name="email" required>
+        <br><br>
+        <label for="password">Пароль ㅤㅤㅤㅤㅤ:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <label for="password">Повторите Пароль:</label>
+        <input type="password" id="password1" name="password1" required>
+        <br><br>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+
+    <footer>
+        &copy; 2023 Строительная компания "Самрат Строй"
+    </footer>
+</body>
+</html>

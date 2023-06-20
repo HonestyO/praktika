@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Контакты - Строительная компания "Самрат Строй"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Контакты</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Главная</a></li>
+            <li><a href="{{ url_for('about') }}">О Нас</a></li>
+            <li><a href="{{ url_for('faq') }}">Часто задаваемые вопросы</a></li>
+            <li><a href="{{ url_for('contact') }}">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Свяжитесь с нами</h2>
+        <p>Телефон: +7 123 456-7890</p>
+        <p>Email: info@samratstroy.com</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Строительная компания "Самрат Строй"</p>
+    </footer>
+</body>
+</html>
